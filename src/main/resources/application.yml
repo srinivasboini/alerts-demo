@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: alerts-service
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+logging:
+  pattern:
+    correlation: "[${spring.application.name:},%X{traceId:-},%X{spanId:-}] "
+  include-application-name: false
