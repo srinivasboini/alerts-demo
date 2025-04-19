@@ -9,5 +9,5 @@ spring:
 
 logging:
   pattern:
-    correlation: "[${spring.application.name:},%X{traceId:-},%X{spanId:-}] "
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
   include-application-name: false
